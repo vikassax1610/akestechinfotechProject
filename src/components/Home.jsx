@@ -20,7 +20,7 @@ export default function Home({
     <div className="min-h-screen bg-zinc-800 py-8 text-white">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-extrabold mb-8 tracking-wide border-b-2">
-          Blog<span className="text-red-500">Arena</span>
+          Blog<span className="text-cyan-400">Arena</span>
         </h1>
 
         {loading && (
@@ -49,9 +49,9 @@ export default function Home({
             <div className=" mb-6">
               <Link
                 to="/favorites"
-                className="bg-zinc-700 absolute top-5 right-12 text-white font-bold px-2 py-2 rounded-lg shadow-md hover:bg-blue-600"
+                className="bg-zinc-700 absolute top-5 right-12 text-white font-bold px-2 py-2 rounded-lg shadow-md hover:bg-cyan-600"
               >
-                <span className="text-yellow-500">Favorite</span> Blogs
+                <span className="text-cyan-500">Favorite</span> Blogs
               </Link>
             </div>
 
@@ -59,7 +59,7 @@ export default function Home({
               {currentPosts.map((post) => (
                 <div
                   key={post.id}
-                  className="bg-zinc-500 text-white rounded-lg shadow-lg p-4 border border-gray-200 hover:bg-zinc-600"
+                  className="bg-zinc-500 text-white rounded-lg shadow-md shadow-white p-4 border border-gray-200 hover:bg-zinc-600 hover:shadow-lg"
                 >
                   <div className="relative w-full">
                     <img
@@ -72,7 +72,7 @@ export default function Home({
                       className={` absolute top-0 right-0 px-4 py-2 rounded-md shadow-md ${
                         favorites.includes(post)
                           ? "bg-yellow-300 text-white hover:bg-yellow-500"
-                          : "bg-green-500 text-white hover:bg-green-600"
+                          : "bg-cyan-500 text-white hover:bg-cyan-600"
                       }`}
                     >
                       {favorites.includes(post) ? (
@@ -82,7 +82,7 @@ export default function Home({
                       )}
                     </button>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 tracking-wide ">
+                  <h3 className="text-xl font-bold text-cyan-400 mb-2 tracking-wide ">
                     {post.title}
                   </h3>
                   <p className="text-slate-200 mb-4">{post.body}</p>
@@ -99,8 +99,8 @@ export default function Home({
                   onClick={() => handlePageChange(index + 1)}
                   className={`mx-1 px-4 py-2 rounded-lg shadow-md ${
                     currentPage === index + 1
-                      ? "bg-blue-500 text-white font-bold"
-                      : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100"
+                      ? "bg-cyan-500 text-white font-extrabold"
+                      : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100 font-bold"
                   }`}
                 >
                   {index + 1}

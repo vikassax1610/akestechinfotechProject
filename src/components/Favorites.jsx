@@ -5,14 +5,14 @@ export default function Favorites({ favorites, toggleFavorite }) {
     <div className="min-h-screen bg-zinc-800 py-8 text-white">
       <div className="container mx-auto px-4 ">
         <h1 className="text-3xl font-extrabold border-b-2 tracking-wide mb-8">
-          My Favorite Blogs
+          <span className="text-cyan-500">Favorite</span> Blogs
         </h1>
         <div className=" mb-6">
           <Link
             to="/"
-            className="bg-blue-500 absolute top-5 right-5 font-bold text-white px-16 py-2 rounded-lg shadow-md hover:bg-blue-600"
+            className="bg-zinc-700 absolute top-5 right-5 font-bold text-white px-16 py-2 rounded-lg shadow-md hover:bg-cyan-600"
           >
-            Home
+            Back to <span className="text-cyan-500">Arena</span>
           </Link>
         </div>
 
@@ -20,7 +20,7 @@ export default function Favorites({ favorites, toggleFavorite }) {
           {favorites.map((post) => (
             <div
               key={post.id}
-              className="bg-zinc-500 text-white rounded-lg shadow-md p-4 border border-gray-200"
+              className="bg-zinc-500 text-white rounded-lg shadow-md shadow-white p-4 border border-gray-200 hover:bg-zinc-600 hover:shadow-lg"
             >
               <div className="relative w-full">
                 <img src="/icon.jpg" alt="" className="w-80 h-48 pt-0 pb-1" />
@@ -31,7 +31,7 @@ export default function Favorites({ favorites, toggleFavorite }) {
                   <Delete className="text-white" />
                 </button>
               </div>
-              <h3 className="text-xl text-white font-bold mb-2 tracking-wide">
+              <h3 className="text-xl text-cyan-400 font-bold mb-2 tracking-wide">
                 {post.title}
               </h3>
               <p className="text-slate-200 mb-4">{post.body}</p>
