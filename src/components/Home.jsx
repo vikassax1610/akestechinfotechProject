@@ -82,7 +82,7 @@ export default function Home({
                       )}
                     </button>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 tracking-wide">
+                  <h3 className="text-xl font-bold text-white mb-2 tracking-wide ">
                     {post.title}
                   </h3>
                   <p className="text-slate-200 mb-4">{post.body}</p>
