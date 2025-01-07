@@ -20,7 +20,7 @@ export default function Home({
     <div className="min-h-screen bg-zinc-800 py-8 text-white">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-extrabold mb-8 tracking-wide border-b-2">
-          Blog Posts
+          Blog<span className="text-red-500">Arena</span>
         </h1>
 
         {loading && (
@@ -49,9 +49,9 @@ export default function Home({
             <div className=" mb-6">
               <Link
                 to="/favorites"
-                className="bg-blue-500 absolute top-5 right-9 text-white font-bold px-2 py-2 rounded-lg shadow-md hover:bg-blue-600"
+                className="bg-zinc-700 absolute top-5 right-12 text-white font-bold px-2 py-2 rounded-lg shadow-md hover:bg-blue-600"
               >
-                Show My Favorite Blogs
+                <span className="text-yellow-500">Favorite</span> Blogs
               </Link>
             </div>
 
